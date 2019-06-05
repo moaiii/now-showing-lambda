@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "create": "claudia create --region eu-west-1 --handler lambda.handler",
+    "create": "claudia create --region eu-west-1 --api-module app --profile chris-skyscanner",
     "update": "claudia update",
     "test": "claudia test-lambda"
   },

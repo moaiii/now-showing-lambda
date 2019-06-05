@@ -3,5 +3,9 @@
     "role": "now-showing-lambda-executor",
     "name": "now-showing-lambda",
     "region": "eu-west-1"
+  },
+  "api": {
+    "id": "heyu26g4f4",
+    "module": "app"
   }
 }
