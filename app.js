@@ -13,12 +13,15 @@ api.get('/showings', function (req) {
 
 			const baseURL = `https://transportapi.com/v3`;
 
-			const url = `${baseURL}/uk/public/journey/from/postcode:${searchedPostcode}/to/postcode:${endPostCode}${`.json`}?app_id=${API_ID}&app_key=${API_KEY}&service=southeast`
+			const url = `${baseURL}/uk/public/journey/from/postcode:`
+				+ `${searchedPostcode}/to/postcode:`
+				+ `${endPostCode}${`.json`}?`
+				+ `app_id=${API_ID}&app_key=${API_KEY}&service=southeast`
 
 			axios
 				.get(url)
 				.then(function(res) {
-					resolve({ res });
+					resolve(JSON.stringify(res));
 				})
 				.catch(function(axiosError) {
 					reject({ axiosError })
