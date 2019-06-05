@@ -1,6 +1,7 @@
 const ApiBuilder = require('claudia-api-builder');
 const api = new ApiBuilder();
 const axios = require('axios');
+const CircularJSON = require('circular-json');
 
 module.exports = api;
 
@@ -21,7 +22,7 @@ api.get('/showings', function (req) {
 			axios
 				.get(url)
 				.then(function(res) {
-					resolve(JSON.stringify(res));
+					resolve(res.data);
 				})
 				.catch(function(axiosError) {
 					reject({ axiosError })
