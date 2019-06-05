@@ -4,4 +4,4 @@ When running commands remember to append `--profile <aws-profile-name>` to every
 
 ## URL
 
-curl https://heyu26g4f4.execute-api.eu-west-1.amazonaws.com/latest/showings
+`curl https://heyu26g4f4.execute-api.eu-west-1.amazonaws.com/latest/showings?searchedPostcode=<abc>&endPostCode=<xyz>`
