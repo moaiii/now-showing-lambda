@@ -1,4 +1,4 @@
 exports.handler = function (event, context) {
-	context.succeed('hello world');
-
+	console.log(event);
+	context.succeed('hello ' + event.name);
 };
